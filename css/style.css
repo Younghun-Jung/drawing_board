@@ -1,0 +1,192 @@
+/* reset css */
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	font-family: sans-serif;
+
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+html,
+body {
+	height: 100%;
+}
+body,
+ul,
+li,
+input {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style: none;
+}
+input {
+	border: 0;
+}
+
+/* canvas */
+#canvas {
+	display: block;
+}
+
+/* toolbar */
+#toolbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+	background-color: #2f2f2f;
+	color: #fff;
+}
+#toolbar:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/* info: radius */
+#rad {
+	float: left;
+}
+.info {
+	display: inline-block;
+	position: relative;
+	width: 70px;
+}
+#radval {
+	position: absolute;
+	right: 0;
+}
+.ctrl {
+	display: inline-block;
+	margin-left: 5px;
+}
+.radctrl {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-color: #4f4f4f;
+	text-align: center;
+	padding: 5px;
+	cursor: pointer;
+}
+
+/* buttons */
+.btn{
+	float: left;
+	height: 30px;
+	margin-left: 15px;
+	padding: 8px;
+	cursor: pointer;
+}
+#save {
+	background-color: #0000ff;
+}
+#save:hover {
+	background-color: #3f51b5;
+}
+#reset {
+	background-color: #ff0000;
+}
+#reset:hover {
+	background-color: #ff5f5f;
+}
+
+/* Opacity */
+#opacity {
+	position: relative;
+	float: right;
+	width: 112px;
+	height: 30px;
+	margin-right: 5px;
+	padding: 5px 25px 5px 5px;
+	border-radius: 3px;
+	color: #000;
+	background-color: #ececec;
+}
+#opacity .arrow {
+	content: '';
+	position: absolute;
+	top: 10px;
+	right: 5px;
+	width: 0;
+	height: 0;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 10px solid #000;
+	cursor: pointer;
+}
+#opacity.on .arrow {
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 0;
+	border-bottom: 10px solid #000;
+}
+#opaval {
+	display: inline-block;
+	width: 25px;
+	text-align: center;
+}
+#opa_box {
+	display: none;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	padding: 5px 0;
+	border-top: 1px solid #bbb;
+	border-radius: 3px;
+	background-color: #ececec;
+}
+#opacity.on #opa_box {
+	display: block;
+}
+#opa_lyr {
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	left: 0;
+	width: 100%;
+	height: 100px;
+}
+#opa_line {
+	position: absolute;
+	top: 5px;
+	left: 50%;
+	width: 2px;
+	height: 90px;
+	margin-left: -1px;
+	background-color: #bbb;
+}
+#opa_bar {
+	position: absolute;
+	top: 0;
+	left: -14px;
+	width: 30px;
+	height: 12px;
+	border-radius: 5px;
+	background-color: #525252;
+}
+
+/* colors */
+#colors {
+	float: right;
+}
+.swatch {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin-left: 5px;
+	border-radius: 15px;
+	box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 1px 0px rgba(0, 0, 0, 0.5);
+}
+.swatch.active {
+	border: 2px solid #fff;
+	box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
