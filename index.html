@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- toolbar -->
+	<div id="toolbar">
+		<!-- radius info -->
+		<div id="rad">
+			<span class="info">
+				Radius <span id="radval">10</span>
+			</span>
+			<span class="ctrl">
+				<span id="decrad" class="radctrl">-</span>
+				<span id="incrad" class="radctrl">+</span>
+			</span>
+		</div>
+		<!-- buttons -->
+		<div id="reset" class="btn">RESET</div>
+		<div id="save" class="btn">SAVE</div>
+		<!-- colors controller -->
+		<ul id="colors"></ul>
+		<!-- opacity controller -->
+		<div id="opacity" class="">Opacity
+			<span id="opaval">1.0</span>
+			<span id="opa_arrow" class="arrow"></span>
+			<div id="opa_box">
+				<span id="opa_line"><span id="opa_bar"></span></span>
+				<div id="opa_lyr"></div>
+			</div>
+		</div>
+	</div>
+	<!-- canvas -->
+	<canvas id="canvas">This browser don't suppot HTML CANVAS</canvas>
+	<!-- JS load -->
+	<script src="js/app.js"></script>
+	<script src="js/radius.js"></script>
+	<script src="js/colors.js"></script>
+	<script src="js/buttons.js"></script>
+</body>
+</html>
